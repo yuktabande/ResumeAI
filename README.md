@@ -2,9 +2,9 @@
 
 An AI-powered platform that semantically matches resumes to job descriptions using sentence transformers and cosine similarity scoring.
 
-[![CI](https://github.com/YOUR_USERNAME/resume-intelligence/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/resume-intelligence/actions/workflows/ci.yml)
 
-**Live App:** https://resume-intelligence-ui.vercel.app  
+**Live App:** [https://resume-intelligence-ui.vercel.app ](https://resume-ai-interface.vercel.app/) 
+
 **API Docs:** https://your-render-url.onrender.com/docs
 
 ---
