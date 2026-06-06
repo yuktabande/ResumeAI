@@ -9,6 +9,10 @@ An AI-powered platform that semantically matches resumes to job descriptions usi
 
 ---
 
+## Screenshot
+
+![Resume Intelligence Dashboard](resume-intelligence-ui/src/assets/demo.jpeg)
+
 ## What It Does
 
 - Upload a resume PDF — text is extracted and stored automatically
