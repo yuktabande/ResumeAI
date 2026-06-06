@@ -1,16 +1,24 @@
-# React + Vite
+# Resume Intelligence Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An AI-powered platform that semantically matches resumes to job descriptions using sentence transformers and cosine similarity scoring.
 
-Currently, two official plugins are available:
+**Live App:** https://resume-intelligence-ui.vercel.app  
+**API Docs:** https://your-render-url.onrender.com/docs
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Screenshot
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+![Resume Intelligence Dashboard](./assets/resume-intelligence-dashboard.png)
 
-## Expanding the ESLint configuration
+_Upload resumes, create job descriptions, and view AI-powered semantic matching scores in a clean dashboard._
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## What It Does
+
+- Upload a resume PDF — text is extracted and stored automatically
+- Add job descriptions from any JD text
+- Match your resume against a single JD and get a semantic similarity score
+- Bulk match your resume against up to 20 JDs at once, ranked by relevance
+- View full match history for any candidate
