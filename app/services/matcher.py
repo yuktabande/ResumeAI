@@ -7,7 +7,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 @lru_cache(maxsize=1)
 def get_model() -> SentenceTransformer:
-    return SentenceTransformer("all-MiniLM-L6-v2")
+    return SentenceTransformer("paraphrase-MiniLM-L3-v2")
 
 
 def generate_embedding(text: str) -> np.ndarray:
