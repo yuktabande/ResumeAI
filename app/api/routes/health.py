@@ -12,6 +12,8 @@ class HealthResponse(BaseModel):
 
 @router.get("/health", response_model=HealthResponse)
 async def health_check() -> HealthResponse:
+    from app.services.matcher import get_model
+    get_model()
     return HealthResponse(
         status="ok",
         version="0.1.0",
