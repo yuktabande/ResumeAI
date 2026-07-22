@@ -1,24 +1,21 @@
-import os
 import numpy as np
-import requests
+from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 
-HF_API_URL = "https://api-inference.huggingface.co/models/sentence-transformers/all-MiniLM-L6-v2"
+_model: SentenceTransformer | None = None
 
 
-def get_headers():
-    token = os.environ.get("HF_API_TOKEN")
-    return {"Authorization": f"Bearer {token}"}
+def get_model() -> SentenceTransformer:
+    global _model
+    if _model is None:
+        _model = SentenceTransformer("all-MiniLM-L6-v2")
+    return _model
 
 
 def generate_embedding(text: str) -> np.ndarray:
-    response = requests.post(
-        HF_API_URL,
-        headers=get_headers(),
-        json={"inputs": text[:512]},
-    )
-    response.raise_for_status()
-    return np.array(response.json())
+    model = get_model()
+    embedding = model.encode(text[:512], convert_to_numpy=True)
+    return np.array(embedding)
 
 
 def compute_similarity(text_a: str, text_b: str) -> float:
