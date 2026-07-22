@@ -1,0 +1,12 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "cd resume-intelligence-ui && npm ci",
+  "buildCommand": "cd resume-intelligence-ui && npm run build",
+  "outputDirectory": "resume-intelligence-ui/dist",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
